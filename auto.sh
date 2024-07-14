@@ -18,4 +18,5 @@ ssh -i "KSSoftware_KeyPair.pem" ubuntu@ec2-3-35-141-181.ap-northeast-2.compute.a
 cd /usr/local
 sudo rm -rf app
 sudo git clone https://github.com/Minuring/KSSoftware_Test_Download.git app
-sudo java -jar K*.jar
+cd app
+java -jar K*.jar
