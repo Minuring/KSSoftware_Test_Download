@@ -13,7 +13,7 @@ git add .
 git commit -m "Upload Build $(DATE)"
 git push
 
-ssh -i "KSSoftware_KeyPair.pem" ubuntu@ec2-3-35-141-181.ap-northeast-2.compute.amazonaws.com"
+ssh -i "KSSoftware_KeyPair.pem" ubuntu@ec2-3-35-141-181.ap-northeast-2.compute.amazonaws.com
 
 cd /usr/local
 sudo rm -rf app
