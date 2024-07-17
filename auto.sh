@@ -1,12 +1,17 @@
 #!/bin/bash
-cd ~/projects/intellij-workspace/KSSoftware
-./gradlew bootJar
-mv build/libs/K*.jar ~/Desktop/AutoBuild
+echo "1을 누르면 빌드, 아니면 빌드하지않고 바로 업로드 후 SSH접속"
+read build
+if [ build == 1 ]; then
 
-cd src/front
-yarn build
-rm -rf ~/Desktop/AutoBuild/build
-mv build ~/Desktop/AutoBuild
+	cd ~/projects/intellij-workspace/KSSoftware
+	./gradlew bootJar
+	mv build/libs/K*.jar ~/Desktop/AutoBuild
+
+	cd src/front
+	yarn build
+	rm -rf ~/Desktop/AutoBuild/build
+	mv build ~/Desktop/AutoBuild
+fi
 
 DATE=$(date)
 cd ~/Desktop/AutoBuild
