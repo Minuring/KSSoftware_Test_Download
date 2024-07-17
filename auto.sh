@@ -5,6 +5,7 @@ mv build/libs/K*.jar ~/Desktop/AutoBuild
 
 cd src/front
 yarn build
+rm ~/Desktop/AutoBuild/build/
 mv build ~/Desktop/AutoBuild
 
 DATE=$(date)
