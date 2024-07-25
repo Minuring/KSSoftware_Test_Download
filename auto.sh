@@ -4,14 +4,14 @@ read build
 if [ build == 1 ]; then
 
 	cd ~/projects/intellij-workspace/KSSoftware
-	./gradlew bootJar
-	rm -rf ~/Desktop/AutoBuild/KS*.jar
-	mv build/libs/K*.jar ~/Desktop/AutoBuild
+	sudo ./gradlew bootJar
+	sudo rm -rf ~/Desktop/AutoBuild/KS*.jar
+	sudo mv build/libs/K*.jar ~/Desktop/AutoBuild
 
 	cd src/front
-	yarn build
-	rm -rf ~/Desktop/AutoBuild/build
-	mv build ~/Desktop/AutoBuild
+	sudo yarn build
+	sudo rm -rf ~/Desktop/AutoBuild/build
+	sudo mv build ~/Desktop/AutoBuild
 fi
 
 DATE=$(date)
