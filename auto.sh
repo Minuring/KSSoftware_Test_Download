@@ -5,6 +5,7 @@ if [ build == 1 ]; then
 
 	cd ~/projects/intellij-workspace/KSSoftware
 	./gradlew bootJar
+	rm -rf ~/Desktop/AutoBuild/KS*.jar
 	mv build/libs/K*.jar ~/Desktop/AutoBuild
 
 	cd src/front
