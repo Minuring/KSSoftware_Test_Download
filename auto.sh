@@ -1,8 +1,4 @@
 #!/bin/bash
-echo "1을 누르면 빌드, 아니면 빌드하지않고 바로 업로드 후 SSH접속"
-read build
-if [ build == 1 ]; then
-
 	cd ~/projects/intellij-workspace/KSSoftware
 	sudo ./gradlew bootJar
 	sudo rm -rf ~/Desktop/AutoBuild/KS*.jar
@@ -12,7 +8,6 @@ if [ build == 1 ]; then
 	sudo yarn build
 	sudo rm -rf ~/Desktop/AutoBuild/build
 	sudo mv build ~/Desktop/AutoBuild
-fi
 
 DATE=$(date)
 cd ~/Desktop/AutoBuild
