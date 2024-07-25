@@ -1,13 +1,13 @@
 #!/bin/bash
 	cd ~/projects/intellij-workspace/KSSoftware
-	sudo ./gradlew bootJar
-	sudo rm -rf ~/Desktop/AutoBuild/KS*.jar
-	sudo mv build/libs/K*.jar ~/Desktop/AutoBuild
+	./gradlew bootJar
+	rm -rf ~/Desktop/AutoBuild/KS*.jar
+	mv build/libs/K*.jar ~/Desktop/AutoBuild
 
 	cd src/front
-	sudo yarn build
-	sudo rm -rf ~/Desktop/AutoBuild/build
-	sudo mv build ~/Desktop/AutoBuild
+	yarn build
+	rm -rf ~/Desktop/AutoBuild/build
+	mv build ~/Desktop/AutoBuild
 
 DATE=$(date)
 cd ~/Desktop/AutoBuild
